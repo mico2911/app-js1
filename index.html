@@ -4,9 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Figuras Geometricas</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Calculadora de áreas y perimetros</h1>
+        <p>En esta página web podrás calcular el área y perimetro de diversas figuras geométricas</p>
+    </header>
+    <main>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Cuadrado</h3>
+                <img class="icono-figura" src="img/cuadrado.png" alt="cuadrado">
+                <form>
+                    <label for="inputCuadrado">Ingrese la medida del lado del cuadrado (cm)</label>
+                    <input id = "inputCuadrado" type="number"/>
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                    <button type="button" onclick="limpiarCuadrado()">Borrar</button>
+                    <label class="resultados">Resultados: </label>
+                    <label>Perímetro (cm):  </label>
+                    <input id = "inputResultadoCuadradoPerimetro" type="number" readonly/>                    
+                    <label>Área (cm<sup>2</sup>): </label>
+                    <input id = "inputResultadoCuadradoArea" type="number" readonly/>                    
+                </form>
+            </div>
+            <div class="flex-item">
+                <h3>Triangulo</h3>
+                <img class="icono-figura" src="img/triangulo.png" alt="triangulo">
+                <form>
+                    <!--RECOJO DE DATOS-->
+                    <label for="inputTrianguloL1">Ingrese la medida del lado del triangulo (cm)</label>
+                    <input id = "inputTrianguloL1" type="number"/>
+                    <label for="inputTrianguloL2">Ingrese la medida del lado del triangulo (cm)</label>
+                    <input id = "inputTrianguloL2" type="number"/>
+                    <label for="inputTrianguloB">Ingrese la medida de la base del triangulo (cm)</label>
+                    <input id = "inputTrianguloB" type="number"/>
+                    <!--FIN RECOJO DE DATOS-->
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+                    <button type="button" onclick="limpiarTriangulo()">Borrar</button>
+                    <label class="resultados">Resultados: </label>
+                    <label>Perímetro (cm):  </label>
+                    <input id = "inputResultadoTrianguloPerimetro" type="number" readonly/>                    
+                    <label>Área (cm<sup>2</sup>): </label>
+                    <input id = "inputResultadoTrianguloArea" type="number" readonly/>                    
+                </form>
+            </div>
+            <div class="flex-item">
+                <h3>Rombo</h3>
+                <img class="icono-figura" src="img/rombo.png" alt="rombo">
+                <form>
+                    <!--RECOJO DE DATOS-->
+                    <label for="inputRombo">Ingrese la medida del lado del rombo (cm)</label>
+                    <input id = "inputRombo" type="number"/>
+                    <label for="inputRombo_D">Ingrese la la longitud de la diagonal mayor del rombo (cm)</label>
+                    <input id = "inputRombo_D" type="number"/>
+                    <label for="inputRombo_d">Ingrese la la longitud de la diagonal menor del rombo (cm)</label>
+                    <input id = "inputRombo_d" type="number"/>
+                    <!--FIN RECOJO DE DATOS-->
+                    <button type="button" onclick="calcularPerimetroRombo()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaRombo()">Calcular el área</button>
+                    <button type="button" onclick="limpiarRombo()">Borrar</button>
+                    <label class="resultados">Resultados: </label>
+                    <label>Perímetro (cm):  </label>
+                    <input id = "inputResultadoRomboPerimetro" type="number" readonly/>                    
+                    <label>Área (cm<sup>2</sup>): </label>
+                    <input id = "inputResultadoRomboArea" type="number" readonly/>                    
+                </form>
+            </div>
+            <div class="flex-item">
+                <div class="item-title">
+                    <h3 class="titulo-item">Circunferencia</h3>
+                </div>                
+                <img class="icono-figura" src="img/circulo.png" alt="circunferencia">
+                <form>
+                    <label for="inputCircunferencia">Ingrese la medida del radio de la circunferencia (cm)</label>
+                    <input id = "inputCircunferencia" type="number"/>
+                    <button type="button" onclick="calcularLongitudCircunferencia()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaCircunferencia()">Calcular el área</button>
+                    <button type="button" onclick="limpiarCircunferencia()">Borrar</button>
+                    <label class="resultados">Resultados: </label>
+                    <label>Perímetro (cm):  </label>
+                    <input id = "inputResultadoCircunferenciaPerimetro" type="number" readonly/>                    
+                    <label>Área (cm<sup>2</sup>): </label>
+                    <input id = "inputResultadoCircunferenciaArea" type="number" readonly/>                    
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <script src = "funcionalidad.js"></script>
 </body>
 </html>
